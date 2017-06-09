@@ -1,4 +1,4 @@
-int displayWidth=600, displayHeight=1000;
+int displayWidth=600, displayHeight=800;
 // Game State
 // 0 -- Start Screen
 // 1 -- Game Running Screen
@@ -11,7 +11,7 @@ float PLAYER_VERT_VELOCITY = 35;
 float MAX_VERT_VELOCITY = 15;
 
 // Physical Constants
-float gravity = 1.0;
+float gravity = 0.0;
 float restitutionCoeff = 0.95;
 float dragCoeff = 0.03;
 
@@ -19,8 +19,8 @@ float dragCoeff = 0.03;
 color bgColor = color(255,253,231);
 
 // Player Parameters
-float playerX, playerY;
-float playerVx, playerVy;
+float playerX=displayWidth/2, playerY=displayHeight/2;
+float playerVx=0, playerVy=5;
 float playerRadius = 20;
 color playerColor = color(179,157,219);
 
@@ -49,3 +49,4 @@ color loseColor = color(93,64,55);
 char LEFT = 'a', RIGHT = 'd', UP = 'w';
 char RESET = 'r', PAUSE = 'p', START = 's';
 boolean left, right, up, reset, pause, start;
+int i;
